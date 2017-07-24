@@ -25,7 +25,7 @@ public class CartCotroller {
 
     @RequestMapping(value="/{cartId}", method = RequestMethod.GET)
     public @ResponseBody Cart read(@PathVariable (value = "cartId") String cartId){
-        System.out.print("122222222222222222222222222222 cart ctrl");
+        System.out.println("Testing From CartController"+cartId);
         return cartDao.read(cartId);
     }
     @RequestMapping(value = "/{cartId}", method = RequestMethod.PUT)
@@ -43,7 +43,7 @@ public class CartCotroller {
     @RequestMapping(value = "/add/{productId}", method = RequestMethod.PUT)
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public void addItem(@PathVariable(value = "productId") String productId, HttpServletRequest request){
-System.out.println("testing testing");
+
         String sessionId = request.getSession().getId();
         Cart cart = cartDao.read(sessionId);
         if(cart == null){

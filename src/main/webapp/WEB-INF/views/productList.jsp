@@ -24,16 +24,17 @@
             </thead>
             <c:forEach items="${products}" var="product">
                 <tr>
-                    <td><img class = "one" src="<c:url value="/resources/images/${product.productId}.png"/> " alt="image"  />
+                    <td><img class="one" src="<c:url value="/resources/images/${product.productId}.png"/> "
+                             alt="image"/>
                     </td>
                     <td>${product.productName}</td>
                     <td>${product.productCategory}</td>
                     <td>${product.productCondition}</td>
                     <td>${product.productPrice} USD</td>
                     <td><a href="<spring:url value="/productList/viewProduct/${product.productId}" />"
-                    ><span class="glyphicon glyphicon-info-sign"></span></a> </td>
+                    ><span class="glyphicon glyphicon-info-sign"></span></a></td>
                 </tr>
             </c:forEach>
         </table>
 
-<%@include file="/WEB-INF/views/template/footer.jsp"%>
+<%@include file="/WEB-INF/views/template/footer.jsp" %>

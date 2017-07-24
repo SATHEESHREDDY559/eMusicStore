@@ -34,6 +34,7 @@ public class CartDaoImpl implements CartDao{
         if (!cartMap.keySet().contains(cart.getCartId())){
             throw  new IllegalArgumentException(String.format("Can not update a cart. The cart with given id(%)"+" does not"+" exist",cart.getCartId()));
         }
+        System.out.println("testing update CartDaoImp"+cartId);
         cartMap.put(cart.getCartId(), cart);
     }
 

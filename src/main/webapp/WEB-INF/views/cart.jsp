@@ -16,9 +16,9 @@
             </div>
         </section>
         <section class="container" ng-app="cartApp">
-            <div ng-controller ="cartCtrl" ng-init="initCart("${cartId}")">
+            <div ng-controller ="cartCtrl" ng-init="initCart('${cartId}')">
             <div>
-                <a class="btn btn-danger pull-left" ng-click="clearCart("${cartId}")"><span class="glyphicon glyphicon-remove-sign"></span>Clear cart</a>
+                <a class="btn btn-danger pull-left" ng-click="clearCart('${cartId}')"><span class="glyphicon glyphicon-remove-sign"></span>Clear cart</a>
 
             </div>
         <table class="table table-hover">
